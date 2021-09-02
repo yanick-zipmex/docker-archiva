@@ -2,8 +2,8 @@ FROM openjdk:8-jdk-alpine
 MAINTAINER Xetus OSS <xetusoss@xetus.com>
 
 # Add the archiva user and group with a specific UID/GUI to ensure
-RUN addgroup --gid 1000 archiva &&\
-	adduser --system -u 1000 -G archiva archiva &&\
+RUN addgroup --gid 990 archiva &&\
+	adduser --system -u 990 -G archiva archiva &&\
 	apk add bash curl
 
 # Set archiva-base as the root directory we will symlink out of.
